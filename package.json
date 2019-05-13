@@ -1,0 +1,24 @@
+{
+  "name": "rubik-report",
+  "version": "1.0.0",
+  "main": "Report.js",
+  "repository": "git@github.com:nikitonishe/rubik-report.git",
+  "author": "nikitandr <ns@indotech.ru>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "rubik",
+    "kubik"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "rubik-main": "^2.1.1"
+  },
+  "perDependencies": {
+    "rubik-main": "^1.5.1"
+  },
+  "dependencies": {
+
+  }
+}
