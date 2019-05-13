@@ -1,6 +1,6 @@
 {
   "name": "rubik-report",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "Report.js",
   "repository": "git@github.com:nikitonishe/rubik-report.git",
   "author": "nikitandr <ns@indotech.ru>",
@@ -18,7 +18,5 @@
   "perDependencies": {
     "rubik-main": "^1.5.1"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
