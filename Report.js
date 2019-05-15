@@ -93,7 +93,7 @@ class Report extends Rubik.Kubik {
     if (extension) {
       for (const name of Object.keys(extension)) {
         if (extension[name] && typeof(extension[name]) === 'object' && this[name]) {
-          Object.Assign(this[name], extension[name]);
+          Object.assign(this[name], extension[name]);
         }
       }
     }
