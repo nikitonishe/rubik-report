@@ -1,5 +1,5 @@
 const Rubik = require('rubik-main');
-const MongoDbCursor = require('../../services/MongoDbCursor');
+const MongoDbCursor = require('./services/MongoDbCursor');
 
 class Report extends Rubik.Kubik {
   /**
