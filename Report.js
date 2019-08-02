@@ -33,7 +33,7 @@ class Report extends Rubik.Kubik {
     const cursor = new MongoDbCursor({ Model, query });
     const statsCsvGenerator = new this.csvGenerators[modelName]({
       cursor,
-      app: this.rubik,
+      app: this.app,
       isDevStats: options.isDevStats
     });
 
