@@ -1,6 +1,6 @@
 {
   "name": "rubik-report",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "Report.js",
   "repository": "git@github.com:nikitonishe/rubik-report.git",
   "author": "nikitandr <ns@indotech.ru>",
