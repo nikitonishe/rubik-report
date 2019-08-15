@@ -29,9 +29,16 @@ class Report extends Rubik.Kubik {
     const Model = this.storage.models[modelName];
     if (!Model || !this.csvGenerators[modelName]) throw new Error('invalid modelName');
 
-    const query = await this.getQuery({ modelName, options })
-    const cursor = new MongoDbCursor({ Model, query });
+    let data, cursor;
+    // В случае если в модели существует метод получения данных для отчета используем его
+    if (Model.getReportData) {
+      data = await Model.getReportData({ options });
+    } else { // Иначе как обычно создаем курсор, который потом будем обходить в csvGenerator
+      const query = await this.getQuery({ modelName, options })
+      cursor = new MongoDbCursor({ Model, query });
+    }
     const statsCsvGenerator = new this.csvGenerators[modelName]({
+      data,
       cursor,
       app: this.app,
       isDevStats: options.isDevStats
@@ -52,7 +59,7 @@ class Report extends Rubik.Kubik {
       return await this.getSpecificQuery[modelName](options);
     }
     const { from, to } = options;
-    return { createdAt: { $gte: from, $lt: to }, bot: options.bot};
+    return { createdAt: { $gte: from, $lt: to }, bot: options.bot };
   }
 
   /**
