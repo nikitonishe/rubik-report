@@ -1,22 +1,33 @@
 {
   "name": "rubik-report",
-  "version": "1.0.6",
-  "main": "Report.js",
+  "version": "2.0.0",
+  "main": "src/Report.js",
   "repository": "git@github.com:nikitonishe/rubik-report.git",
   "author": "nikitandr <ns@indotech.ru>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ./",
+    "tarball": "tarball=\"$(npm pack .)\"; wc -c \"${tarball}\"; tar tvf \"${tarball}\"; rm \"${tarball}\";"
+  },
+  "files": [
+    "src/",
+    "kit/",
+    "!**/*.test.js"
+  ],
   "keywords": [
     "rubik",
-    "kubik"
+    "kubik",
+    "report"
   ],
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "rubik-main": "^2.1.1"
+    "eslint": "^7.29.0",
+    "jest": "^27.0.6",
+    "rubik-main": "^2.2.2"
   },
-  "perDependencies": {
-    "rubik-main": "^1.5.1"
+  "peerDependencies": {
+    "rubik-main": "^2.1.0"
   },
   "dependencies": {}
 }
