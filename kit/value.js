@@ -26,13 +26,13 @@ function toString(row) {
 }
 
 /**
- * Записать строку в поток
+ * Записать массив (строку в понимании таблицы) в поток
  * @param  {WritableStream} stream
  * @param  {Array} row — массив с элементами строки
  */
 function writeToStream(stream, row) {
   if (!Array.isArray(row)) {
-    throw new ReportError(ReportError.ROW_IS_NOT_A_STRING);
+    throw new ReportError(ReportError.ROW_IS_NOT_AN_ARRAY);
   }
 
   stream.write(toString(row));

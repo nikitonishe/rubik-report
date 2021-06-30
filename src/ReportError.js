@@ -6,7 +6,7 @@ ReportError.DEFAULT_QUERY_BUILDER_IS_NULL = 'Option defaultQueryBuilder is null 
 ReportError.GENERATORS_IS_NOT_AN_OBJECT = 'Option generators is not an object';
 ReportError.QUERIES_IS_NOT_AN_OBJECT = 'Option queries is not an object';
 ReportError.QUERY_BUILDER_IS_NOT_A_FUNCTION = 'Option defaultQueryBuilder is not a function or null';
-ReportError.ROW_IS_NOT_A_STRING = 'Param row should be an array';
+ReportError.ROW_IS_NOT_AN_ARRAY = 'Param row should be an array';
 ReportError.WRITE_TO_STREAM_IS_NOT_IMPLEMENTED = 'Write to stream is not implemented';
 
 module.exports = ReportError;
