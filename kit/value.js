@@ -22,7 +22,7 @@ function toString(row) {
 
   if (!Array.isArray(row)) return esc(row);
 
-  return row.map((value) => `${esc(value)}`).join(';') + '\n';
+  return row.map((value) => `"${esc(value)}"`).join(';') + '\n';
 }
 
 /**
